@@ -1,4 +1,4 @@
-# System-programming-notes
+# Bulatik's system programming notes
 
 ## 1. Boost build on Windows OS platform for VC++:
 
