@@ -26,3 +26,26 @@
 + [How to build Boost using Visual Studio](https://codeyarns.com/2014/06/06/how-to-build-boost-using-visual-studio/)
 + [Installation - Getting Started on Windows](https://theboostcpplibraries.com/introduction-installation)
 + [Boost libraries - build only what I need](https://stackoverflow.com/questions/4714289/boost-libraries-build-only-what-i-need)
+
+## 2. CMake option to compile x86-32/64 bit executables using C++ compiler:
+
+### 2.1. x86-32 bit executable
+```
+set(CMAKE_CXX_FLAGS -m32)
+```
+### 2.2. x86-64 bit executable
+```
+set(CMAKE_CXX_FLAGS -m64)
+```
+
+## 3. CMake option to compile STATIC library:
+
+```
+add_library(PROJECT_NAME LIB_SOURCES)
+```
+
+## 4. CMake option to compile SHARED (DYNAMIC) library:
+
+```
+add_library(PROJECT_NAME SHARED LIB_SOURCES)
+```
