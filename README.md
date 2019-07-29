@@ -49,15 +49,25 @@ add_library(PROJECT_NAME LIB_SOURCES)
 ```
 add_library(PROJECT_NAME SHARED LIB_SOURCES)
 ```
-## 5. Link STATIC(.a)/SHARED(.so) library with executable:
+## 5. Linking a STATIC(.a)/SHARED(.so) library with an executable:
 
 ```
 target_link_libraries(PROJECT_NAME <STATIC_LIB_NAME>.(a/so))
 ```
-## 6. Build STATIC executable (no depends on libraries, example libstd++):
+## 6. Building an STATIC executable (no depends on libraries, example the `libstd++`):
 
 ```
 target_link_libraries(PROJECT_NAME -static)
 OR
 set(CMAKE_EXE_LINKER_FLAGS "-static")
+```
+## 7. Showing linked shared libraries of an executable:
+
+```
+ldd EXECUTABLE_NAME
+```
+## 8. Determine the type of an executable or a shared library and showing additional information (32/64-bit, example):
+
+```
+file EXECUTABLE_NAME
 ```
